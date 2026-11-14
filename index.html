@@ -29,8 +29,10 @@
         <li><a class="nav-link" href="#achievements">Achievements</a></li>
         <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light mode</span></button>
     </nav>
   </header>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
   <main id="main-content">
     <section class="hero section" id="home" aria-labelledby="hero-title">
@@ -45,6 +47,11 @@
           <div class="hero-actions">
             <a class="button button-primary" href="assets/documents/Resume - Mark Jervin Medina.pdf" download="Mark-Jervin-Medina-Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
             <a class="button button-secondary" href="#contact">Contact Me <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-stats" aria-label="Portfolio highlights">
+            <div><strong>09</strong><span>Tools in toolkit</span></div>
+            <div><strong>03</strong><span>Featured projects</span></div>
+            <div><strong>24/7</strong><span>Curiosity mode</span></div>
           </div>
           <div class="hero-note"><span class="note-line" aria-hidden="true"></span> Currently pursuing my studies at La Consolacion University Philippines</div>
         </div>
@@ -122,27 +129,37 @@
           <h2 id="projects-title">Things I’m <span class="gradient-text">building.</span></h2>
           <p class="section-intro">Sample project ideas to help you get started. Replace these with your own completed work.</p>
         </div>
+        <div class="project-toolbar reveal" aria-label="Filter projects">
+          <span class="filter-label">Explore by focus</span>
+          <div class="filter-buttons" role="group" aria-label="Project filters">
+            <button class="filter-button active" type="button" data-filter="all">All work</button>
+            <button class="filter-button" type="button" data-filter="web">Web</button>
+            <button class="filter-button" type="button" data-filter="app">Apps</button>
+            <button class="filter-button" type="button" data-filter="game">Games</button>
+          </div>
+          <span class="project-count" aria-live="polite"></span>
+        </div>
         <div class="projects-grid">
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-category="game" data-project="game">
             <div class="project-art project-art-one" aria-hidden="true">
               <img class="project-screenshot" src="assets/images/project-1-game.png" alt="2D game level screenshot">
               <span class="art-label">01 / GAME</span>
             </div>
-            <div class="project-content"><p class="project-type">2D GAME PROJECT</p><h3>2D Game Developing</h3><p>A side-scrolling game level built with platforming layout, obstacles, and interactive terrain to create a playable 2D prototype.</p><div class="tag-list"><span>Unity</span><span>C#</span><span>Level Design</span></div><a class="project-link" href="#contact">View Project <span aria-hidden="true">↗</span></a></div>
+            <div class="project-content"><p class="project-type">2D GAME PROJECT</p><h3>2D Game Developing</h3><p>A side-scrolling game level built with platforming layout, obstacles, and interactive terrain to create a playable 2D prototype.</p><div class="tag-list"><span>Unity</span><span>C#</span><span>Level Design</span></div><button class="project-link" type="button" data-open-project="game">View case study <span aria-hidden="true">→</span></button></div>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-category="app" data-project="roadmap">
             <div class="project-art project-art-two" aria-hidden="true">
               <img class="project-screenshot" src="assets/images/it-roadmap.png" alt="IT learning roadmap dashboard preview">
               <span class="art-label">02 / APP</span>
             </div>
-            <div class="project-content"><p class="project-type">LEARNING ROADMAP</p><h3>IT Knowledge Roadmapping</h3><p>A digital progression dashboard that helps users track learning paths, skills, and course milestones for IT development.</p><div class="tag-list"><span>UI/UX</span><span>HTML</span><span>CSS</span></div><a class="project-link" href="#contact">View Project <span aria-hidden="true">↗</span></a></div>
+            <div class="project-content"><p class="project-type">LEARNING ROADMAP</p><h3>IT Knowledge Roadmapping</h3><p>A digital progression dashboard that helps users track learning paths, skills, and course milestones for IT development.</p><div class="tag-list"><span>UI/UX</span><span>HTML</span><span>CSS</span></div><button class="project-link" type="button" data-open-project="roadmap">View case study <span aria-hidden="true">→</span></button></div>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-category="web" data-project="cafe">
             <div class="project-art project-art-three" aria-hidden="true">
               <img class="project-screenshot" src="assets/images/web-project.png" alt="Web development landing page screenshot">
               <span class="art-label">03 / WEB</span>
             </div>
-            <div class="project-content"><p class="project-type">WEB PROJECT</p><h3>Web Developing</h3><p>A modern café landing page concept with welcoming hero content, warm interior styling, and a sleek promotional layout.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>Design</span></div><a class="project-link" href="#contact">View Project <span aria-hidden="true">↗</span></a></div>
+            <div class="project-content"><p class="project-type">WEB PROJECT</p><h3>Web Developing</h3><p>A modern café landing page concept with welcoming hero content, warm interior styling, and a sleek promotional layout.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>Design</span></div><button class="project-link" type="button" data-open-project="cafe">View case study <span aria-hidden="true">→</span></button></div>
           </article>
         </div>
       </div>
@@ -203,6 +220,7 @@
             <a class="email-link" href="mailto:jervinmedina0117@gmail.com">jervinmedina0117@gmail.com <span aria-hidden="true">↗</span></a>
             <p class="personal-detail">Phone: +63 976 308 7711 / +63 966 814 0560</p>
             <p class="personal-detail">Location: San Isidro 2, Paombong, Bulacan</p>
+            <button class="copy-email" type="button" data-copy-email="jervinmedina0117@gmail.com">Copy email address</button>
             <div class="social-links" aria-label="Social profiles">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -248,5 +266,10 @@
   </footer>
 
   <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card"><button class="modal-close" type="button" aria-label="Close project details" data-close-modal>×</button><p class="eyebrow" id="modal-type">CASE STUDY</p><h2 id="modal-title">Project details</h2><p id="modal-description"></p><div class="modal-meta"><span id="modal-stack"></span><span id="modal-status"></span></div><a class="button button-primary" href="#contact" data-close-modal>Discuss a similar idea <span aria-hidden="true">→</span></a></div>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
